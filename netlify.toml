@@ -2,6 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+# Vite 7 needs Node 20.19+ / 22.12+; pin it so the build never runs on an older runtime.
+[build.environment]
+  NODE_VERSION = "22"
+
 # Single-page app: every route is served by the client-side router.
 [[redirects]]
   from = "/*"
